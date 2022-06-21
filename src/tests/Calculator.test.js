@@ -126,26 +126,29 @@ describe('Calculator', () => {
 
 
   // // calculator.clearClick() - clear the running total without affecting the calculation
-  // it('should clear total and keep calculation', () => {
 
-  //   const number1 = container.getByTestId('number1');
-  //   const number2 = container.getByTestId('number2');
-  //   const number3 = container.getByTestId('number3');
-  //   const operatorAdd = container.getByTestId('operator_add');
-  //   const operatorMultiply = container.getByTestId('operator-multiply');
-  //   const runningTotal = container.getByTestId('running-total');
-  //   const equalButton = container.getByTestId('operator-equals')
-  //   const clearButton = container.getByTestId('clear')
-  //   fireEvent.click(number1);
-  //   fireEvent.click(operatorAdd);
-  //   fireEvent.click(number3);
-  //   fireEvent.click(operatorMultiply);
-  //   fireEvent.click(number2);
-  //   fireEvent.click(number3);
-  //   fireEvent.click(clearButton);
-  //   fireEvent.click(equalButton);
-  //   expect(runningTotal.textContent).toEqual('4');
+  it('should clear total and keep calculation', () => {
 
-  // });
+    const number1 = container.getByTestId('number1');
+    const number2 = container.getByTestId('number2');
+    const number3 = container.getByTestId('number3');
+    const operatorAdd = container.getByTestId('operator_add');
+    const operatorMultiply = container.getByTestId('operator-multiply');
+    const runningTotal = container.getByTestId('running-total');
+    const equalButton = container.getByTestId('operator-equals')
+    const clearButton = container.getByTestId('clear')
+    fireEvent.click(number1);
+    fireEvent.click(operatorAdd);
+    fireEvent.click(number2);
+    fireEvent.click(equalButton);
+    fireEvent.click(clearButton);
+    fireEvent.click(operatorAdd);
+    fireEvent.click(number1);
+    fireEvent.click(operatorAdd);
+    fireEvent.click(number1);
+    fireEvent.click(equalButton);
+    expect(runningTotal.textContent).toEqual('5');
+
+  });
 
 })
