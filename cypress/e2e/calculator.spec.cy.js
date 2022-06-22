@@ -18,7 +18,7 @@ describe("Calculator", () => {
   })
 
   // Do the arithmetical operations update the display with the result of the operation?
-  it("Updates the display of the arithmetical operations", () => {
+  it("Updates the display with the arithmetical operations result", () => {
     cy.get('#number1').click();
     cy.get('#operator_add').click();
     cy.get('#number1').click();
