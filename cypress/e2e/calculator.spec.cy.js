@@ -26,7 +26,7 @@ describe("Calculator", () => {
     cy.get('.display').should('contain', '2')
   })
   // Can multiple operations be chained together?
-  it("Updates the display of operations be chained together", () => {
+  it("Should chain operations together", () => {
     cy.get('#number1').click();
     cy.get('#operator_add').click();
     cy.get('#number3').click();
